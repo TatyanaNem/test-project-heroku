@@ -12,13 +12,11 @@ type ShowType = {
 
 function App() {
   let [show, setShow] = useState<ShowType[]>([])
-
   const useShowUp = () => {
           fetch('https://jsonplaceholder.typicode.com/todos')
               .then(response => response.json())
               .then(json => setShow(json))
   }
-
   const deleteAll = () => {
       setShow([])
   }
